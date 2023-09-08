@@ -1,0 +1,5 @@
+targets:
+  - name: staging
+    metadata: 
+      last_auth_masters_timestamp:
+        action: get-latest-auth-masters-timestamp
