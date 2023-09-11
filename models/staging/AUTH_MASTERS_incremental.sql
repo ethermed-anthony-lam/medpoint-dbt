@@ -5,8 +5,6 @@ with incremental_data as (
     *
   from
     {{source('medpoint', 'rvs_auth_masters')}}
-  -- where
-  --   LASTCHANGEDATE >= '{{ target('staging', 'last_auth_masters_timestamp') }}'
 )
 
 select *
