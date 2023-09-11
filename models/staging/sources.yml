@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: medpoint 
+    database: raw
+    schema: medpoint
+    tables:
+      - name: rvs_auth_masters
