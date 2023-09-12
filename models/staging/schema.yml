@@ -1,14 +1,14 @@
 
 version: 2
 
-# models:
-#     - name: AUTH_MASTERS_incremental
-#       description: "Tracking changes to raw auth_masters"
-#       columns:
-#           - name: id
-#             description: "The primary key for this table"
-#             tests:
-#                 - unique
-#                 - not_null
+models:
+    - name: auth_masters_incremental
+      description: "Tracking changes to raw auth_masters"
+      columns:
+          - name: WEBKEY
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
 
 

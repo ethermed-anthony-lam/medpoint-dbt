@@ -36,3 +36,6 @@ models:
     # Applies to all files under models/example/
     staging:
       materialized: view
+
+on-run-end:
+  - "{{ clean_up_and_update()}}"
