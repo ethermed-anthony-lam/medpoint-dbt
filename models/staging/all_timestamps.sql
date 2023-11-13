@@ -58,7 +58,7 @@ with raw_auth_masters_df as (
     select DISTINCT COMPANY_ID, VENDORID as VENDOR, LASTCHANGEDATE as aux_vendor_LASTCHANGEDATE from raw_vend_masters_df
   ),
   vendor_timestamps as (
-    select COMPANY_ID, WEBKEY, aux_vendor_LASTCHANGEDATE as UPDATE_TIMESTAMP, 'VEND_MASTERS' AS UPDATE_REASON
+    select r.COMPANY_ID, r.WEBKEY, a.aux_vendor_LASTCHANGEDATE as UPDATE_TIMESTAMP, 'VEND_MASTERS' AS UPDATE_REASON
     from raw_auth_masters_df r
     join aux_vendor a on r.COMPANY_ID = a.COMPANY_ID AND r.VENDOR = a.VENDOR
   )
