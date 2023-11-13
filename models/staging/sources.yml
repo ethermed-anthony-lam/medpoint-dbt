@@ -1,8 +1,30 @@
 version: 2
 
 sources:
-  - name: medpoint 
+  - name: medpoint_raw 
     database: raw
     schema: medpoint
     tables:
       - name: rvs_auth_masters
+      - name: rv_auth_details
+      - name: rv_auth_diags
+      - name: rvs_auth_notes
+      - name: rvs_auth_attachments
+      - name: rv_hp_contracts
+      - name: rv_prov_speccodes
+      - name: rv_prov_vendinfo
+      - name: rvs_memb_company
+      - name: rvs_memb_condinfo
+      - name: rvs_memb_hphists
+      - name: rvs_memb_pcphists
+      - name: rvs_prov_company
+      - name: rvs_vend_masters
+      - name: rv_prov_hospinfo
+      - name: rv_audit_auth_master
+      - name: rvs_web_auth_inquiry
+
+  - name: medpoint_dev
+    database: dev
+    schema: medpoint_dbt
+    tables:
+      - name: meta_table
